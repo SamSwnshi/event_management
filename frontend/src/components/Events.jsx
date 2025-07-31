@@ -5,11 +5,11 @@ const eventsData = [
   {
     id: 1,
     image: "https://images.unsplash.com/photo-1464983953574-0892a716854b",
-    title: "The Wall: Final Climb",
+    title: "updated test event 123",
     date: "6/10/2025",
     time: "08:00",
     description: "A once-in-a-lifetime adventure to scale the Wall before it melts. Gear provided by the Night's Watch. Raven certificate on completion.",
-    location: "Castle Black",
+    location: "Ranchi",
     status: "Upcoming",
   },
   {
@@ -28,7 +28,7 @@ const eventsData = [
     title: "Iron Bank Investment Pitch",
     date: "6/8/2025",
     time: "13:00",
-    description: "Join the Iron Bank's secret investors’ meeting. Learn how to fund kingdoms, manipulate war outcomes, and stay rich no matter who wins.",
+    description: "Join the Iron Bank's secret investors' meeting. Learn how to fund kingdoms, manipulate war outcomes, and stay rich no matter who wins.",
     location: "Bank Vaults, Braavos",
     status: "Upcoming",
   },
@@ -42,14 +42,6 @@ const Events = () => {
 
   return (
     <div className="events-bg">
-      <header className="signup-header">
-        <span className="highlight">The Social Hub</span>
-        <nav>
-          <button>Dashboard</button>
-          <button>Profile</button>
-          <button className="logout-btn">Logout</button>
-        </nav>
-      </header>
       <h2 className="events-title highlight">Explore Events</h2>
       <div className="events-filters">
         <input type="text" placeholder="Search events..." value={search} onChange={e => setSearch(e.target.value)} />

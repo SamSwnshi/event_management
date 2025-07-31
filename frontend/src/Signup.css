@@ -1,26 +1,50 @@
 .signup-bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #232323;
-  min-height: 100vh;
-  padding: 0;
 }
 .signup-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 48px 0 48px;
+  padding: 16px 48px;
+  background: #000000;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .signup-header .highlight {
   color: #ffc107;
   font-size: 2rem;
   font-weight: bold;
 }
+.signup-header nav {
+  display: flex;
+  gap: 16px;
+}
 .signup-header nav button {
   background: none;
   border: none;
   color: #fff;
   font-size: 1.1rem;
-  margin-left: 24px;
   cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.signup-header nav button:hover {
+  background-color: #333;
+}
+.signup-header nav button.logout-btn {
+  color: #ff6b6b;
+}
+.signup-header nav button.logout-btn:hover {
+  background-color: #ff6b6b;
+  color: #000;
 }
 .signup-card {
   background: #181818;

@@ -31,7 +31,7 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(data.user));
       dispatch(loginSuccess({ user: data.user, token: data.token }));
       alert("Login successful!");
-      navigate("/dashboard");
+      navigate("/events");
     } catch (err) {
       setError(
         err.response?.data?.message || "Login failed. Please try again."
@@ -43,13 +43,6 @@ const Login = () => {
 
   return (
     <div className="signup-bg">
-      <header className="signup-header">
-        <span className="highlight">The Social Hub</span>
-        <nav>
-          <button onClick={() => navigate("/login")}>Login</button>
-          <button onClick={() => navigate("/signup")}>Signup</button>
-        </nav>
-      </header>
       <div className="signup-card">
         <h2 className="highlight">Login</h2>
         <form onSubmit={handleSubmit}>
