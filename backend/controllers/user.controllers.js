@@ -5,7 +5,12 @@ import User from "../models/user.models.js";
 // Register user
 export const register = async (req, res) => {
   try {
+    console.log("Register request body:", req.body);
+    console.log("Register request headers:", req.headers);
+    
     const { name, email, password, avatar } = req.body;
+    
+    console.log("Extracted data:", { name, email, password: password ? "***" : "undefined", avatar });
 
     // Check if user already exists
     const existingUser = await User.findOne({ email });

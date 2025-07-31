@@ -10,7 +10,7 @@ import User from "./models/user.models.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 app.use(cors({
   origin: '*',
@@ -29,6 +29,6 @@ app.use('/api', eventRoutes)
 app.use('/api', registrationRoutes)
 
 app.listen(port, () => {
-  console.log(`Server is connected to PORT: ${port} 🔥`);
+  console.log(`Server is connected to PORT: ${port} ��`);
   config()
 });
