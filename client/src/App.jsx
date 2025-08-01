@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Events from "./components/Events";
@@ -19,7 +19,7 @@ function AppContent() {
       {location.pathname !== '/' && <Header />}
       <main style={{ width: '100%', height: location.pathname === '/' ? '100vh' : 'calc(100vh - 60px)', overflow: 'hidden' }}>
         <Routes>
-          <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
